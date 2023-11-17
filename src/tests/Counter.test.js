@@ -8,8 +8,10 @@ beforeEach(() => {
   render(<Counter />);
 })  
 
-test('renders counter message', () => {
+test('renders counter message', () => { //based off of App.test.js
   // Complete the unit test below based on the objective in the line above
+  const counterMessage = screen.getByText('Counter');
+  expect(counterMessage).toBeInTheDocument();
 });
 
 test('should render initial count with value of 0', () => {
