@@ -22,6 +22,10 @@ test('should render initial count with value of 0', () => {
 
 test('clicking + increments the count', () => {
   // Complete the unit test below based on the objective in the line above
+  const count = screen.getByTestId('count');
+
+  fireEvent.click(screen.getByText('+'));
+  expect(count).toHaveTextContent('1');
 });
 
 test('clicking - decrements the count', () => {
