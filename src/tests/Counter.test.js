@@ -16,6 +16,8 @@ test('renders counter message', () => { //based off of App.test.js
 
 test('should render initial count with value of 0', () => {
   // Complete the unit test below based on the objective in the line above
+  const count = screen.getByTestId('count');
+  expect(count).toHaveTextContent('0');
 });
 
 test('clicking + increments the count', () => {
